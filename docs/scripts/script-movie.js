@@ -86,11 +86,12 @@ if (!movieId) {
         })
         .catch(err => console.error(err));
         
-
+        
         const minhaImagem = document.getElementById('movie-poster');
         minhaImagem.crossOrigin = 'Anonymous';
         minhaImagem.src = googleProxyURL + encodeURIComponent(posterPath);
         
+        document.getElementById('movie-details-title').textContent = `Popcorn Prose - ${title}`;
         document.getElementById('views').textContent = formatNumber(views);
         document.getElementById('likes').textContent = formatNumber(likes);
         document.getElementById('sinopse').textContent = overview;
